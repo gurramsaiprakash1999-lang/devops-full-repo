@@ -16,7 +16,7 @@ pipeline {
         }
         stage('3. SonarQube Analysis') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqa_7f84c592f78cc3d809eaa0a4ba61d5483085a84f'
+                sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=sqa_7f84c592f78cc3d809eaa0a4ba61d5483085a84f'
             }
         }
         stage('4. Build Docker Image') {
